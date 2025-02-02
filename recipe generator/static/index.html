@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Generator</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .recipe-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div class="gradient-bg text-white py-12 mb-8">
+        <div class="container mx-auto px-4">
+            <h1 class="text-5xl font-bold text-center mb-4">Recipe Generator</h1>
+            <p class="text-center text-xl opacity-90">Transform your ingredients into delicious meals</p>
+        </div>
+    </div>
+
+    <div class="container mx-auto px-4 pb-12">
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+                <div class="mb-6">
+                    <label for="ingredients" class="block text-gray-700 text-lg font-semibold mb-2">Enter Your Ingredients</label>
+                    <textarea id="ingredients" 
+                        class="w-full px-4 py-3 border border-purple-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+                        rows="4" 
+                        placeholder="Enter ingredients separated by commas (e.g., chicken, rice, tomatoes)"></textarea>
+                </div>
+                
+                <button id="generateBtn" 
+                    class="w-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-bold py-3 px-6 rounded-lg hover:from-purple-700 hover:to-indigo-700 transition-all transform hover:scale-105">
+                    Generate Recipe
+                </button>
+                
+                <div id="loadingIndicator" class="hidden mt-6 text-center">
+                    <div class="inline-block animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-purple-500"></div>
+                    <p class="text-gray-600 mt-2">Crafting your perfect recipe...</p>
+                </div>
+            </div>
+
+            <div id="recipeResult" class="hidden">
+                <div class="recipe-card rounded-xl shadow-lg p-8 mb-8">
+                    <h2 id="recipeName" class="text-3xl font-bold mb-6 text-gray-800 border-b pb-4"></h2>
+                    
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <div class="mb-6">
+                                <h3 class="text-xl font-semibold mb-3 text-purple-700">⏰ Cooking Time</h3>
+                                <p id="cookingTime" class="text-gray-700"></p>
+                            </div>
+
+                            <div class="mb-6">
+                                <h3 class="text-xl font-semibold mb-3 text-purple-700">📝 Ingredients</h3>
+                                <ul id="ingredientsList" class="list-disc pl-5 text-gray-700 space-y-1"></ul>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="mb-6">
+                                <h3 class="text-xl font-semibold mb-3 text-purple-700">👩‍🍳 Instructions</h3>
+                                <ol id="instructionsList" class="list-decimal pl-5 text-gray-700 space-y-2"></ol>
+                            </div>
+
+                            <div class="mb-6">
+                                <h3 class="text-xl font-semibold mb-3 text-purple-700">🥗 Nutritional Info</h3>
+                                <p id="nutritionalInfo" class="text-gray-700"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="videoSection" class="bg-white rounded-xl shadow-lg p-8">
+                    <h3 class="text-2xl font-bold mb-6 text-gray-800">Related Recipe Videos</h3>
+                    <div id="videoContainer" class="grid md:grid-cols-2 gap-6">
+                        <!-- Videos will be inserted here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
