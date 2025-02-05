@@ -1,3 +1,5 @@
+Preview: https://drive.google.com/file/d/1pUAlsyx1kdHpMWg6EimfMScwYzamMntm/view?usp=sharing
+
 # AI Recipe Generator
 
 A web application that generates recipes based on available ingredients using AI.
