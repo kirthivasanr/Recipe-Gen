@@ -36,9 +36,7 @@ A web application that generates recipes based on available ingredients using AI
 
 - Backend: Python Flask
 - Frontend: HTML, JavaScript, Tailwind CSS
-- AI: OpenAI GPT-3.5 Turbo
+- AI: Prefer your own AI model, and use your own key
 - Additional: Flask-CORS, python-decouple
 
-## Note
 
-Make sure to keep your OpenAI API key secure and never commit it to version control.
