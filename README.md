@@ -23,6 +23,7 @@ A web application that generates recipes based on available ingredients using AI
 3. Create a `.env` file in the root directory with your OpenAI API key:
    ```
    OPENAI_API_KEY=your_api_key_here
+    YOUTUBE_API_KEY= your_api_key_here
    ```
 
 4. Run the application:
